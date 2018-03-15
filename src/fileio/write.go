@@ -61,6 +61,7 @@ func isExist(file string) {
 	}
 	if exist {
 		f, err = os.OpenFile(file, os.O_APPEND, 0666)
+		// f, err = os.Open(fileName)
 		fmt.Println("file existed")
 	} else {
 		f, err = os.Create(file)
